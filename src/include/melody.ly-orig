@@ -1,0 +1,75 @@
+\version "2.12.3"
+
+\include "english.ly"
+
+melodyWithChordSymbols =
+        <<
+			\new ChordNames {
+			  \chordmode {
+			   \huge
+
+				% instrumental
+				e2. | e | b:7 | e | \break
+				a | e | fs2:7 b4:7 | e2. \bar "||" \break
+
+				% verse
+				\repeat volta 2 {
+				\bar "|:"
+				e2. | e | b:7 | e | \break
+				a | e | b:7 | e2. 
+				\bar ":|" \break
+				}
+
+				% bridge
+				b2.:7 | e | b4.:7 e4. | fs4.:7 b4.:7 |	\break
+				e2. | e | b:7 | e | \break
+				a | e | fs2:7 b4:7 | e2. \bar "||" \break
+
+				% chorus
+				e2. | e | b:7 | e | \break
+				a | e | b:7 | e2. \bar "||"	\break
+			  }
+			}
+
+			\new Voice \with {
+			  \consists Pitch_squash_engraver
+			} \relative c'' {
+				\improvisationOn
+			    \key e \major 
+				\time 3/4
+
+				e4^"(instrumental)" e4 e4 | e4 e4 e4 | e4 e4 e4 | e4 e4 e4 | e4 e4 e4 | e4 e4 e4 | e4 e4 e4 | e4^"Fin" e4 e4 | 
+				\break
+
+				\repeat volta 2 {
+					e4^"(verse)" e4 e4 | e4 e4 e4 | e4 e4 e4 | e4 e4 e4 | e4 e4 e4 | e4 e4 e4 | e4 e4 e4 | e4 e4 e4^"(2x)" | 
+				}
+				\break
+
+				\time 6/8
+				e16^"(bridge)" e16 e16 e16 e16 e16 e16 e16 e16 e16 e16 e16 | e16 e16 e16 e16 e16 e16 e16 e16 e16 e16 e16 e16 | 
+				e16 e16 e16 e16 e16 e16 e16 e16 e16 e16 e16 e16 | e16 e16 e16 e16 e16 e16 e16 e16 e16 e16 e16 e16 | 
+				\break
+
+				\time 3/4
+				e4 e4 e4 | e4 e4 e4 | e4 e4 e4 | e4 e4 e4 | e4 e4 e4 | e4 e4 e4 | e4 e4 e4 | e4 e4 e4 | 
+				\break
+
+				e4^"(chorus - ssshhhh)" e4 e4 | e4 e4 e4 | e4 e4 e4 | e4 e4 e4 | e4 e4 e4 | e4 e4 e4 | e4 e4 e4 | e4 e4 e4 | 
+
+			}
+
+			\include "include/lyrics.ly"
+
+		>>	
+
+% -----------------------------------------------
+% Typeset using Lilypond 
+% Copyright c. 2011 by Lucas Gonze <lucas@gonze.com>
+% Hereby donated to the public domain.
+% -----------------------------------------------
+
+
+
+
+
