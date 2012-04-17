@@ -1,4 +1,4 @@
-tagline ="Typesetting using Lilypond by Lucas Gonze. Derived from code by Stan Sanderson in the Mutopia project."
+tagline = \markup { \teeny "Typesetting using Lilypond by Lucas Gonze. Derived from code by Stan Sanderson in the Mutopia project." }
 
 #(define-markup-list-command (paragraph layout props args) (markup-list?)
   (interpret-markup-list layout props
